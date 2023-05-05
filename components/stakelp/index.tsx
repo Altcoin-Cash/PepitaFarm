@@ -54,8 +54,8 @@ const StakeLp: React.FC<StakeLpProps> = ({
     popupMessage = "shame...";
   }
 
-  const BreweryMaster = "0x2675f42eC760f6252660778E97Ee64Da062CE897";
-  const BreweryMasterABI = [
+  const PepitaMaster = "0x2675f42eC760f6252660778E97Ee64Da062CE897";
+  const PepitaMasterABI = [
     {
       inputs: [
         {
@@ -385,9 +385,9 @@ const StakeLp: React.FC<StakeLpProps> = ({
       type: "function",
     },
   ];
-  const BreweryMasterContract = new ethers.Contract(
-    BreweryMaster,
-    BreweryMasterABI,
+  const PepitaMasterContract = new ethers.Contract(
+    PepitaMaster,
+    PepitaMasterABI,
     provider
   );
 
@@ -403,7 +403,7 @@ const StakeLp: React.FC<StakeLpProps> = ({
 
   const depositLP = async () => {
     if (active) {
-      const BreweryMasterWithSigner = BreweryMasterContract.connect(signer);
+      const PepitaMasterWithSigner = PepitaMasterContract.connect(signer);
       if (isDeposit) {
         //@ts-ignore
         if (inputAmount > tokensAvailable) {
@@ -413,7 +413,7 @@ const StakeLp: React.FC<StakeLpProps> = ({
 
           let waitForTx = true;
 
-          let tx = await BreweryMasterWithSigner.deposit(
+          let tx = await PepitaMasterWithSigner.deposit(
             basicInfo.pid,
             ethers.utils.parseUnits(inputAmount, 18)
           ).catch((e) => {
@@ -452,7 +452,7 @@ const StakeLp: React.FC<StakeLpProps> = ({
 
           let waitForTx = true;
 
-          let tx = await BreweryMasterWithSigner.withdraw(
+          let tx = await PepitaMasterWithSigner.withdraw(
             basicInfo.pid,
             ethers.utils.parseUnits(inputAmount, 18)
           ).catch((e) => {
@@ -495,7 +495,7 @@ const StakeLp: React.FC<StakeLpProps> = ({
   };
 
   const getDepositedAmount = async (): Promise<ethers.BigNumber> => {
-    const userInfo = await BreweryMasterContract.userInfo(
+    const userInfo = await PepitaMasterContract.userInfo(
       basicInfo.pid,
       account
     );

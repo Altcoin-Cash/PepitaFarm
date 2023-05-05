@@ -156,12 +156,12 @@ export default function Data() {
         type: "event",
       },
     ];
-    const BreweryMasterContract = new ethers.Contract(
+    const PepitaMasterContract = new ethers.Contract(
       PEPI_TOKEN_ADDRESS,
       ERC20_ABI,
       provider
     );
-    const pepitaBurnt = await BreweryMasterContract.balanceOf(
+    const pepitaBurnt = await PepitaMasterContract.balanceOf(
       "0x0000000000000000000000000000000000000001"
     );
     let pepitaBurtFormatted = parseFloat(ethers.utils.formatEther(pepitaBurnt));
@@ -172,8 +172,8 @@ export default function Data() {
   return (
     <div tw="font-family[Tempest] height[100vh] md:hidden">
       <Head>
-        <title>Data | Brewery Farm</title>
-        <meta name="description" content="Brewery Farm" />
+        <title>Data | Pepita Farm</title>
+        <meta name="description" content="Pepita Farm" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

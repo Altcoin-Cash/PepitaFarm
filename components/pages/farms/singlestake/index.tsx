@@ -97,7 +97,7 @@ const SingleStake: React.FC<StakeProps> = ({
   const handleApproval = async () => {
     // @ts-ignore
     const provider = new ethers.providers.Web3Provider(window.ethereum);
-    const BreweryMaster = "0x2675f42eC760f6252660778E97Ee64Da062CE897";
+    const PepitaMaster = "0x2675f42eC760f6252660778E97Ee64Da062CE897";
 
     // Code to check the token allowance
     const lpAbi = [
@@ -117,7 +117,7 @@ const SingleStake: React.FC<StakeProps> = ({
       lpAbi,
       provider
     );
-    const approved = await lpContract.allowance(account, BreweryMaster);
+    const approved = await lpContract.allowance(account, PepitaMaster);
     const formatapprove = ethers.utils.formatUnits(approved, 18);
 
     // Enable Approve contract button, we do this so that when we switch wallets the approve button is reset.
@@ -145,9 +145,9 @@ const SingleStake: React.FC<StakeProps> = ({
       // @ts-ignore
       const provider = new ethers.providers.Web3Provider(window.ethereum);
       const signer = provider.getSigner();
-      const BreweryMaster = "0x2675f42eC760f6252660778E97Ee64Da062CE897";
+      const PepitaMaster = "0x2675f42eC760f6252660778E97Ee64Da062CE897";
 
-      const BreweryMasterABI = [
+      const PepitaMasterABI = [
         {
           inputs: [
             {
@@ -506,13 +506,13 @@ const SingleStake: React.FC<StakeProps> = ({
         },
       ];
 
-      const BreweryMasterContract = new ethers.Contract(
-        BreweryMaster,
-        BreweryMasterABI,
+      const PepitaMasterContract = new ethers.Contract(
+        PepitaMaster,
+        PepitaMasterABI,
         provider
       );
-      const BreweryMasterWithSigner = BreweryMasterContract.connect(signer);
-      let tx = await BreweryMasterWithSigner.deposit(basicInfo.pid, 0);
+      const PepitaMasterWithSigner = PepitaMasterContract.connect(signer);
+      let tx = await PepitaMasterWithSigner.deposit(basicInfo.pid, 0);
 
       tx.wait().then(async () => {
         await poolInfo.updatePool(account, prices);
@@ -528,7 +528,7 @@ const SingleStake: React.FC<StakeProps> = ({
       const provider = new ethers.providers.Web3Provider(window.ethereum);
       const signer = provider.getSigner();
 
-      const BreweryMaster = "0x2675f42eC760f6252660778E97Ee64Da062CE897";
+      const PepitaMaster = "0x2675f42eC760f6252660778E97Ee64Da062CE897";
 
       const abi = [
         { inputs: [], stateMutability: "nonpayable", type: "constructor" },
@@ -583,7 +583,7 @@ const SingleStake: React.FC<StakeProps> = ({
       const contract = new ethers.Contract(address, abi, provider);
       const contractWithSigner = contract.connect(signer);
       let tx = await contractWithSigner.approve(
-        BreweryMaster,
+        PepitaMaster,
         ethers.utils.parseEther("10000000")
       );
 

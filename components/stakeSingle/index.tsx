@@ -51,8 +51,8 @@ const StakeSingle: React.FC<StakesingleProps> = ({
     popupMessage = "shame...";
   }
 
-  const BreweryMaster = "0x2675f42eC760f6252660778E97Ee64Da062CE897";
-  const BreweryMasterABI = [
+  const PepitaMaster = "0x2675f42eC760f6252660778E97Ee64Da062CE897";
+  const PepitaMasterABI = [
     {
       inputs: [
         {
@@ -382,9 +382,9 @@ const StakeSingle: React.FC<StakesingleProps> = ({
       type: "function",
     },
   ];
-  const BreweryMasterContract = new ethers.Contract(
-    BreweryMaster,
-    BreweryMasterABI,
+  const PepitaMasterContract = new ethers.Contract(
+    PepitaMaster,
+    PepitaMasterABI,
     provider
   );
 
@@ -400,7 +400,7 @@ const StakeSingle: React.FC<StakesingleProps> = ({
 
   const depositLP = async () => {
     if (active) {
-      const BreweryMasterWithSigner = BreweryMasterContract.connect(signer);
+      const PepitaMasterWithSigner = PepitaMasterContract.connect(signer);
       if (isDeposit) {
         //@ts-ignore
         if (inputAmount > tokensAvailable) {
@@ -408,7 +408,7 @@ const StakeSingle: React.FC<StakesingleProps> = ({
         } else {
           setLoading(true);
           //@ts-ignore
-          let tx = await BreweryMasterWithSigner.deposit(
+          let tx = await PepitaMasterWithSigner.deposit(
             basicInfo.pid,
             ethers.utils.parseUnits(inputAmount, 18)
           );
@@ -441,7 +441,7 @@ const StakeSingle: React.FC<StakesingleProps> = ({
           alert("Unstake amount can't be less than 0");
         } else {
           //@ts-ignore
-          let tx = await BreweryMasterWithSigner.withdraw(
+          let tx = await PepitaMasterWithSigner.withdraw(
             basicInfo.pid,
             ethers.utils.parseUnits(inputAmount, 18)
           );
@@ -473,7 +473,7 @@ const StakeSingle: React.FC<StakesingleProps> = ({
   };
 
   const getDepositedAmount = async (): Promise<ethers.BigNumber> => {
-    const userInfo = await BreweryMasterContract.userInfo(
+    const userInfo = await PepitaMasterContract.userInfo(
       basicInfo.pid,
       account
     );

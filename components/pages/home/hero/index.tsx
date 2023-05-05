@@ -154,12 +154,12 @@ function HeroSection() {
         type: "event",
       },
     ];
-    const BreweryMasterContract = new ethers.Contract(
+    const PepitaMasterContract = new ethers.Contract(
       PEPI_TOKEN_ADDRESS,
       ERC20_ABI,
       provider
     );
-    const pepitaBurnt = await BreweryMasterContract.balanceOf(
+    const pepitaBurnt = await PepitaMasterContract.balanceOf(
       "0x0000000000000000000000000000000000000001"
     );
     let pepitaBurtFormatted = parseFloat(ethers.utils.formatEther(pepitaBurnt));

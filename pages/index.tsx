@@ -20,7 +20,7 @@ export default function Home() {
     <div tw="font-family[Tempest] min-h-screen max-h-screen">
       <Head>
         <title>Pepita Farm</title>
-        <meta name="description" content="Brewery Farm" />
+        <meta name="description" content="Pepita Farm" />
         <link rel="icon" href="/favicon.ico" />
         <link
           rel="preload"

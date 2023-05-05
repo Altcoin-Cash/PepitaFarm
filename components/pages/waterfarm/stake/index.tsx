@@ -92,7 +92,7 @@ const Stake: React.FC<StakeProps> = ({ basicInfo, pool, prices }) => {
   const handleApproval = async () => {
     // @ts-ignore
     const provider = new ethers.providers.Web3Provider(window.ethereum);
-    const BreweryMaster = "0x2675f42eC760f6252660778E97Ee64Da062CE897";
+    const PepitaMaster = "0x2675f42eC760f6252660778E97Ee64Da062CE897";
 
     // Code to check the token allowance
     const lpAbi = [
@@ -112,7 +112,7 @@ const Stake: React.FC<StakeProps> = ({ basicInfo, pool, prices }) => {
       lpAbi,
       provider
     );
-    const approved = await lpContract.allowance(account, BreweryMaster);
+    const approved = await lpContract.allowance(account, PepitaMaster);
     const formatapprove = ethers.utils.formatUnits(approved, 18);
 
     // Enable Approve contract button, we do this so that when we switch wallets the approve button is reset.
@@ -140,9 +140,9 @@ const Stake: React.FC<StakeProps> = ({ basicInfo, pool, prices }) => {
       // @ts-ignore
       const provider = new ethers.providers.Web3Provider(window.ethereum);
       const signer = provider.getSigner();
-      const BreweryMaster = "0x2675f42eC760f6252660778E97Ee64Da062CE897";
+      const PepitaMaster = "0x2675f42eC760f6252660778E97Ee64Da062CE897";
 
-      const BreweryMasterABI = [
+      const PepitaMasterABI = [
         {
           inputs: [
             {
@@ -501,13 +501,13 @@ const Stake: React.FC<StakeProps> = ({ basicInfo, pool, prices }) => {
         },
       ];
 
-      const BreweryMasterContract = new ethers.Contract(
-        BreweryMaster,
-        BreweryMasterABI,
+      const PepitaMasterContract = new ethers.Contract(
+        PepitaMaster,
+        PepitaMasterABI,
         provider
       );
-      const BreweryMasterWithSigner = BreweryMasterContract.connect(signer);
-      let tx = await BreweryMasterWithSigner.deposit(basicInfo.pid, 0);
+      const PepitaMasterWithSigner = PepitaMasterContract.connect(signer);
+      let tx = await PepitaMasterWithSigner.deposit(basicInfo.pid, 0);
       setLoading(true);
       tx.wait().then(async () => {
         await poolInfo.updatePool(account, prices);
@@ -524,7 +524,7 @@ const Stake: React.FC<StakeProps> = ({ basicInfo, pool, prices }) => {
       const provider = new ethers.providers.Web3Provider(window.ethereum);
       const signer = provider.getSigner();
 
-      const BreweryMaster = "0x2675f42eC760f6252660778E97Ee64Da062CE897";
+      const PepitaMaster = "0x2675f42eC760f6252660778E97Ee64Da062CE897";
 
       const abi = [
         { inputs: [], stateMutability: "nonpayable", type: "constructor" },
@@ -579,7 +579,7 @@ const Stake: React.FC<StakeProps> = ({ basicInfo, pool, prices }) => {
       const contract = new ethers.Contract(address, abi, provider);
       const contractWithSigner = contract.connect(signer);
       let tx = await contractWithSigner.approve(
-        BreweryMaster,
+        PepitaMaster,
         ethers.utils.parseEther("10000000")
       );
 

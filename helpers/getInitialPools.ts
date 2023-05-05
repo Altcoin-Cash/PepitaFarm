@@ -856,16 +856,16 @@ const ERC20_ABI = [
 const getInitialPools = async (): Promise<InitialPool[]> => {
   //@ts-ignore
   const provider = new ethers.providers.Web3Provider(window.ethereum);
-  const BreweryMasterContract = new ethers.Contract(
+  const PepitaMasterContract = new ethers.Contract(
     PEPI_MASTER_ADDRESS,
     PEPI_MASTER_ABI,
     provider
   );
 
-  const poolCount = await getPoolCount(BreweryMasterContract);
+  const poolCount = await getPoolCount(PepitaMasterContract);
   const pools = await getInitialPoolsFromMasterChad(
     poolCount,
-    BreweryMasterContract,
+    PepitaMasterContract,
     provider
   );
 

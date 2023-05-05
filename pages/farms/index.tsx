@@ -56,7 +56,7 @@ const FarmPage: React.FC = () => {
       <BetaPopup setToggle={setToggle} toggle={toggle} />
       <Head>
         <title>Farms | Pepita Farm</title>
-        <meta name="description" content="Brewery Farm" />
+        <meta name="description" content="Pepita Farm" />
         <link rel="icon" href="/favicon.ico" />
         <link
           rel="preload"

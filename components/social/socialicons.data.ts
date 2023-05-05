@@ -1,7 +1,7 @@
 export const socialiconsdata = [
   {
     name: "telegram",
-    link: "https://t.me/BreweryFarm",
+    link: "https://t.me/PepitaFarm",
   },
   {
     name: "twitter",
