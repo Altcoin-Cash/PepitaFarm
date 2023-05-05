@@ -45,9 +45,9 @@ export default function Home() {
               alt=""
             />
             <div tw=" flex flex-col items-center bg-white text-black rounded-xl py-6 px-2 margin-top[-27px] md:text-white  md:background-color[#00910E] md:rounded-3xl md:px-24 md:py-8 md:margin-top[-44px]">
-              <span tw="text-3xl md:text-7xl">WHAT THE F*CK </span>
+              <span tw="text-3xl md:text-7xl">WHAT DO YOU </span>
               <span tw=" font-size[22px] tracking-tighter md:text-5xl">
-                DO YOU WANT TO DO TODAY?
+                WANT TO DO TODAY?
               </span>
             </div>
           </div>
