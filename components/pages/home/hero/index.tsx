@@ -191,7 +191,7 @@ function HeroSection() {
           <span tw="text-9xl text-white">Pepita </span>
           <span tw="-mt-2 -mr-24 font-size[70px] text-white"> YieldFarm</span>
           <div tw="flex items-end -mt-6 -mr-24">
-            <img src="/assets/images/Altcoinchain1.png" alt="" />
+            <img src="/assets/images/pepe-wave.gif" alt="" />
           </div>
         </div>
       </div>

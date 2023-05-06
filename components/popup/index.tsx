@@ -79,7 +79,7 @@ export function WrongNetworkPopup({ loading, setLoading }) {
         >
           X
         </div>
-        <img src={`/assets/images/brewery.png`} alt="" />
+        <img src={`/assets/images/pepitalogo.png`} alt="" />
         <span tw="text-black mt-4 text-3xl ">
           Switch to Altcoinchain Network
         </span>
@@ -100,7 +100,7 @@ export function BetaPopup({ toggle, setToggle }) {
         >
           X
         </div>
-        <img src={`/assets/images/pepita-drop-sm.png`} alt="" />
+        <img src={`/assets/images/pepitalogo.png`} alt="" />
         <span tw="text-white mt-6 text-base text-center">
           Website is still in beta phase. Please report bugs in our discord.{" "}
         </span>

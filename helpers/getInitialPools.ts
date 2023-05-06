@@ -925,7 +925,7 @@ async function getToken(address, provider): Promise<Token | LpToken> {
   try {
     const pool = new ethers.Contract(address, UNI_ABI, provider);
     const _token0 = await pool.token0();
-    const uniPool = await getAltcoinchainUniPool(pool, address);
+    const uniPool = await getAltUniPool(pool, address);
     return uniPool;
   } catch (err) {
     console.log(err);
@@ -941,7 +941,7 @@ async function getToken(address, provider): Promise<Token | LpToken> {
   }
 }
 
-async function getAltcoinchainUniPool(
+async function getAltUniPool(
   pool: ethers.Contract,
   address: string
 ): Promise<LpToken> {

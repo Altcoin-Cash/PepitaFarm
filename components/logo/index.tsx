@@ -3,8 +3,8 @@ import tw from "twin.macro";
 function Logo() {
   return (
     <div tw="flex items-center">
-      <img src="/assets/images/PEPI.png" alt="" />
-      <span tw="text-white">PEPITA FARM</span>
+      <img src="/assets/images/pepitalogo.png" alt="PEPITA FARM" />
+      <span tw="text-white"></span>
     </div>
   );
 }
