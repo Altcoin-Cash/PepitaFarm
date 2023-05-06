@@ -15,7 +15,7 @@ function Hero() {
       <div tw="flex flex-col space-y-6 width[30%] font-size[28px] leading-6 tracking-tighter text-white z-20 absolute top-16 left-8">
         <h1 tw="text-5xl text-center">TOKENOMICS</h1>
         <span>
-          No pre-mine <br />
+          No presale <br />
         </span>
         <span tw="pr-12">
           1 PEPI minted per block. <br />

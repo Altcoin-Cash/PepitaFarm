@@ -8,8 +8,8 @@ function MobHero() {
         <h1 tw="text-3xl ">What is PEPI?</h1>
 
         <span tw="">
-          PEPI is a yield farming token created to help provide liquidity to
-          other meme tokens, a launch pad, and support farming pools for new
+          PEPI is a yield farming meme token created to help provide liquidity
+          to other project, launch pad, and support farming pools for new
           projects.
         </span>
       </div>
@@ -18,10 +18,7 @@ function MobHero() {
 
       <div tw="flex flex-col space-y-6 text-2xl leading-6 tracking-tighter text-white ">
         <h1 tw="text-3xl text-center">TOKENOMICS</h1>
-        <span>
-          0 pre-sale <br /> 30,000 start liquidity <br /> 20,000 marketing & dev
-          fund <br /> 10,000 airdrop
-        </span>
+        <span>No presale.</span>
         <span tw="pr-8">
           1 PEPI minted per block. <br />
           Farms have a deposit fee, no withdraw fees!
