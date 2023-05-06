@@ -29,5 +29,4 @@ const farmsdata: BasicInfo[] = [
     getLP: "https://swapin.co",
   },
 ];
-
 export default farmsdata;

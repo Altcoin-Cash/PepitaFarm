@@ -190,9 +190,7 @@ function HeroSection() {
         <div tw="flex flex-col items-center">
           <span tw="text-9xl text-white">Pepita </span>
           <span tw="-mt-2 -mr-24 font-size[70px] text-white"> YieldFarm</span>
-          <div tw="flex items-end -mt-6 -mr-24">
-            <img src="/assets/images/pepe-wave.gif" alt="" />
-          </div>
+          <div tw="flex items-end -mt-6 -mr-24"></div>
         </div>
       </div>
       <div tw="absolute right-6 top-12 hidden md:block">

@@ -35,12 +35,7 @@ function Nav() {
       <div tw="hidden md:block">
         <Logo />
       </div>
-      <div tw="md:hidden">
-        {path == "/" && (
-          <img src="/assets/images/Altcoinchainlogo.svg" alt="" />
-        )}
-        {path != "/" && <Back />}
-      </div>
+
       <div tw="flex items-center ">
         <div tw="flex items-center space-x-4 text-white text-2xl ">
           {navdata.map((item, index) => (
