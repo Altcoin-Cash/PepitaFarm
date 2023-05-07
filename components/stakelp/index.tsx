@@ -35,7 +35,7 @@ const StakeLp: React.FC<StakeLpProps> = ({
   let popupMessage = "";
 
   //@ts-ignore
-  const provider = new ethers.providers.Web3Provider(window.ethereum);
+  const provider = new ethers.BrowserProvider(window.ethereum);
   const signer = provider.getSigner();
 
   useEffect(() => {

@@ -855,7 +855,7 @@ const ERC20_ABI = [
 
 const getInitialPools = async (): Promise<InitialPool[]> => {
   //@ts-ignore
-  const provider = new ethers.providers.Web3Provider(window.ethereum);
+  const provider = new ethers.BrowserProvider(window.ethereum);
   const PepitaMasterContract = new ethers.Contract(
     PEPI_MASTER_ADDRESS,
     PEPI_MASTER_ABI,

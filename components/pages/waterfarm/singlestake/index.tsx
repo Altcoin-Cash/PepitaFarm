@@ -96,7 +96,7 @@ const SingleStake: React.FC<StakeProps> = ({
 
   const handleApproval = async () => {
     // @ts-ignore
-    const provider = new ethers.providers.Web3Provider(window.ethereum);
+    const provider = new ethers.BrowserProvider(window.ethereum);
     const PepitaMaster = "0x2675f42eC760f6252660778E97Ee64Da062CE897";
 
     // Code to check the token allowance
@@ -143,7 +143,7 @@ const SingleStake: React.FC<StakeProps> = ({
   const harvestRewards = async () => {
     if (active) {
       // @ts-ignore
-      const provider = new ethers.providers.Web3Provider(window.ethereum);
+      const provider = new ethers.BrowserProvider(window.ethereum);
       const signer = provider.getSigner();
       const PepitaMaster = "0x2675f42eC760f6252660778E97Ee64Da062CE897";
 
@@ -525,7 +525,7 @@ const SingleStake: React.FC<StakeProps> = ({
   const approveFarm = async () => {
     if (active) {
       // @ts-ignore
-      const provider = new ethers.providers.Web3Provider(window.ethereum);
+      const provider = new ethers.BrowserProvider(window.ethereum);
       const signer = provider.getSigner();
 
       const PepitaMaster = "0x2675f42eC760f6252660778E97Ee64Da062CE897";
