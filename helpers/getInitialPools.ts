@@ -863,7 +863,7 @@ const getInitialPools = async (): Promise<InitialPool[]> => {
   );
 
   const poolCount = await getPoolCount(PepitaMasterContract);
-  const pools = await getInitialPoolsFromMasterChad(
+  const pools = await getInitialPoolsFromPepitaMaster(
     poolCount,
     PepitaMasterContract,
     provider
@@ -880,7 +880,7 @@ async function getPoolCount(masterContract): Promise<number> {
   return poolCountBigNumber.toNumber();
 }
 
-async function getInitialPoolsFromMasterChad(
+async function getInitialPoolsFromPepitaMaster(
   poolCount: number,
   masterContract: ethers.Contract,
   provider

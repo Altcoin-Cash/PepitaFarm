@@ -33,7 +33,7 @@ function HeroSection() {
   };
 
   const getPepitaBurnt = async () => {
-    const provider = new ethers.providers.JsonRpcProvider(
+    const provider = new ethers.JsonRpcProvider(
       "https://rpc0.altcoinchain.org/rpc"
     );
     const PEPI_TOKEN_ADDRESS = "0xbeeFB44E56885e7ACdb007D2377788daafbFca2D";
